@@ -1,0 +1,24 @@
+{
+    "name": "ニコニコ（Re:仮）全画面表示プラグイン",
+    "description": "ニコニコ動画（Re:仮）を全画面表示に対応させます",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {},
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
